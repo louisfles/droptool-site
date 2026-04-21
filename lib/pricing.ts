@@ -1,0 +1,48 @@
+﻿export const pricingTiers = [
+  {
+    name: "DropTool Coach Lite",
+    price: "Free",
+    description: "The free coaching-first entry point for players getting started.",
+    features: [
+      "Basic overlay",
+      "Basic session summary",
+      "Limited history",
+      "Useful improvement signals",
+      "Official entry into the DropTool ecosystem",
+    ],
+    ctaLabel: "Start Free",
+    ctaHref: "/downloads",
+  },
+  {
+    name: "DropTool Coach",
+    price: "GBP 3.99/month",
+    lifetimePrice: "GBP 24.99 founder lifetime",
+    description: "The main paid tier for serious players who want stronger insights and a premium app-backed workflow.",
+    features: [
+      "Desktop app access",
+      "Premium dashboard",
+      "Longer history windows",
+      "Session comparisons",
+      "Progress tracking",
+      "Premium Discord role",
+    ],
+    ctaLabel: "Upgrade to Coach",
+    ctaHref: "/premium",
+  },
+  {
+    name: "DropTool Full",
+    price: "GBP 7.99/month",
+    lifetimePrice: "GBP 49.99 founder lifetime",
+    description: "The flagship premium tier with the deepest analytics and strongest long-term review layer.",
+    features: [
+      "Everything in Coach",
+      "Deepest analytics",
+      "Stronger review tools",
+      "Flagship premium experience",
+      "Future Evaluate-style systems",
+      "Highest long-term ceiling",
+    ],
+    ctaLabel: "Go Full",
+    ctaHref: "/premium",
+  },
+];
