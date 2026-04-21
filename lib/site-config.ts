@@ -1,4 +1,4 @@
-export const siteConfig = {
+﻿export const siteConfig = {
   name: "DropTool",
   tagline: "PvP Performance Intelligence",
   description:
@@ -17,7 +17,7 @@ export const siteConfig = {
   fullMonthlyCheckoutUrl: "#",
   fullLifetimeCheckoutUrl: "#",
 
-  supportEmail: "support@example.com",
+  supportEmail: "support@droptool.site",
 
   supportedVersions: {
     primary: "1.21.x",
