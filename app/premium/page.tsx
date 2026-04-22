@@ -1,37 +1,40 @@
 ﻿import { pricingTiers } from "@/lib/pricing";
-import { siteConfig } from "@/lib/site-config";
 
-const comparisonPoints = [
+const highlights = [
   {
-    label: "Best for",
-    lite: "Trying DropTool",
-    coach: "Serious improvement",
-    full: "Deepest premium workflow",
+    label: "Free entry",
+    value: "Coach Lite",
   },
   {
-    label: "Review depth",
-    lite: "Light",
-    coach: "Stronger",
-    full: "Deepest",
+    label: "Main paid tier",
+    value: "DropTool Coach",
   },
   {
-    label: "History",
-    lite: "Limited",
-    coach: "Extended",
-    full: "Longest-term",
-  },
-  {
-    label: "Positioning",
-    lite: "Free entry point",
-    coach: "Core premium tier",
-    full: "Flagship tier",
+    label: "Flagship layer",
+    value: "DropTool Full",
   },
 ];
 
 const premiumNotes = [
-  "Coach Lite is the free funnel into the ecosystem.",
-  "Coach is the main paid tier for players who want stronger review and progression tools.",
-  "Full is the flagship premium layer for the deepest analytics and strongest long-term experience.",
+  {
+    title: "Coach Lite",
+    text: "Free starting point for players who want a cleaner improvement path without jumping straight into the deepest premium layer.",
+  },
+  {
+    title: "DropTool Coach",
+    text: "The main paid tier for serious players who want stronger review depth, better workflow, and a more complete app-backed experience.",
+  },
+  {
+    title: "DropTool Full",
+    text: "The flagship premium direction with the deepest analytics, strongest review layer, and highest long-term ceiling.",
+  },
+];
+
+const trustPoints = [
+  "Premium positioning should feel credible, not exaggerated.",
+  "Coach is the main paid recommendation for most serious users.",
+  "Full should feel like the flagship layer, not just a slightly bigger plan.",
+  "Copy should stay clear about what exists now versus what is still rolling out.",
 ];
 
 export default function PremiumPage() {
@@ -44,7 +47,7 @@ export default function PremiumPage() {
           <div className="absolute right-[-120px] top-[-100px] h-[320px] w-[320px] rounded-full bg-cyan-400/10 blur-3xl" />
           <div className="absolute bottom-[-120px] left-[-80px] h-[260px] w-[260px] rounded-full bg-sky-500/10 blur-3xl" />
 
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.35em] text-cyan-300">
                 Premium
@@ -55,10 +58,10 @@ export default function PremiumPage() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
-                DropTool is built as a coaching-first PvP performance ecosystem.
-                Lite gets players in. Coach becomes the main serious upgrade.
-                Full is the flagship layer for the deepest analytics, strongest
-                review tools, and best long-term premium experience.
+                DropTool Coach Lite is the free entry point. DropTool Coach is the
+                main paid tier. DropTool Full is the flagship premium layer for the
+                deepest analytics, strongest review systems, and most complete
+                long-term progression experience.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -70,67 +73,53 @@ export default function PremiumPage() {
                 </a>
 
                 <a
-                  href={siteConfig.discordUrl}
+                  href="/contact"
                   className="inline-flex items-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10"
                 >
-                  Join Discord
+                  Contact Support
                 </a>
               </div>
 
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-[#0b1728]/90 p-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-white/45">
-                    Entry
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-white/90">
-                    Coach Lite
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-[#0b1728]/90 p-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-white/45">
-                    Core paid tier
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-white/90">
-                    DropTool Coach
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-[#0b1728]/90 p-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-white/45">
-                    Flagship
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-white/90">
-                    DropTool Full
-                  </p>
-                </div>
+                {highlights.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl border border-white/10 bg-[#0b1728]/90 p-4"
+                  >
+                    <p className="text-xs uppercase tracking-[0.2em] text-white/45">
+                      {item.label}
+                    </p>
+                    <p className="mt-2 text-sm font-medium text-white/90">
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="rounded-[28px] border border-cyan-400/20 bg-[#0a1627]/90 p-6 shadow-[0_0_60px_rgba(34,211,238,0.06)]">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-                Premium structure
+                Premium philosophy
               </p>
 
               <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                Built to scale with the player.
+                More depth. Better structure. Cleaner progression.
               </h2>
 
               <div className="mt-6 space-y-3">
-                {premiumNotes.map((note) => (
+                {premiumNotes.map((item) => (
                   <div
-                    key={note}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-white/70"
+                    key={item.title}
+                    className="rounded-2xl border border-white/10 bg-white/5 p-4"
                   >
-                    {note}
+                    <h3 className="text-sm font-semibold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-white/65">
+                      {item.text}
+                    </p>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-6 rounded-2xl border border-cyan-400/15 bg-cyan-400/10 p-5 text-sm leading-6 text-white/75">
-                Keep premium messaging honest: show what is available now, what is
-                included in premium, what is still rolling out, and what remains
-                future direction.
               </div>
             </div>
           </div>
@@ -139,14 +128,14 @@ export default function PremiumPage() {
         <section className="mt-16">
           <div className="max-w-3xl">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
-              Plans
+              Compare tiers
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              Three levels. One premium ecosystem.
+              One ecosystem. Three levels of access.
             </h2>
             <p className="mt-4 text-base leading-7 text-white/70">
-              The product ladder should feel clean and deliberate rather than messy
-              or fragmented. Each level increases depth without confusing the brand.
+              The page should make the ladder feel obvious: free entry, serious paid
+              tier, and flagship premium destination.
             </p>
           </div>
 
@@ -163,7 +152,9 @@ export default function PremiumPage() {
                 <p className="mt-3 text-cyan-300">{tier.price}</p>
 
                 {"lifetimePrice" in tier && tier.lifetimePrice ? (
-                  <p className="mt-1 text-sm text-white/45">{tier.lifetimePrice}</p>
+                  <p className="mt-1 text-sm text-white/45">
+                    {tier.lifetimePrice}
+                  </p>
                 ) : null}
 
                 <p className="mt-4 text-sm leading-6 text-white/70">
@@ -187,90 +178,93 @@ export default function PremiumPage() {
           </div>
         </section>
 
-        <section className="mt-16 grid gap-6 lg:grid-cols-[1fr_1fr]">
+        <section className="mt-16 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="rounded-[28px] border border-white/10 bg-white/5 p-7">
             <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-              Comparison
+              Why upgrade
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em]">
-              What changes as you move up.
+              Premium should feel useful, not forced.
             </h2>
 
             <div className="mt-8 space-y-4">
-              {comparisonPoints.map((row) => (
-                <div
-                  key={row.label}
-                  className="rounded-2xl border border-white/10 bg-[#0b1728] p-5"
-                >
-                  <p className="text-xs font-semibold tracking-[0.25em] text-cyan-300">
-                    {row.label}
-                  </p>
-                  <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-                        Lite
-                      </p>
-                      <p className="mt-2 text-sm text-white/80">{row.lite}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-                        Coach
-                      </p>
-                      <p className="mt-2 text-sm text-white/80">{row.coach}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-                        Full
-                      </p>
-                      <p className="mt-2 text-sm text-white/80">{row.full}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
+                <h3 className="text-lg font-semibold">Better review depth</h3>
+                <p className="mt-2 text-sm leading-6 text-white/70">
+                  Upgrade from surface-level visibility into a more structured
+                  performance workflow.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
+                <h3 className="text-lg font-semibold">Longer-term progression</h3>
+                <p className="mt-2 text-sm leading-6 text-white/70">
+                  Build around history, comparisons, and improvement over time
+                  instead of one-off sessions.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
+                <h3 className="text-lg font-semibold">Premium workflow</h3>
+                <p className="mt-2 text-sm leading-6 text-white/70">
+                  Make the product feel like serious software with better structure,
+                  clearer signals, and stronger identity.
+                </p>
+              </div>
             </div>
           </div>
 
           <div className="rounded-[28px] border border-white/10 bg-white/5 p-7">
             <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-              Trust
+              Positioning
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em]">
-              Premium presentation without overclaiming.
+              Premium presentation should stay honest.
             </h2>
 
-            <div className="mt-6 space-y-4">
-              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
-                <h3 className="text-lg font-semibold">Available now</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">
-                  Official site, plan structure, Discord funnel, version-first public
-                  messaging, and a cleaner premium-facing brand.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
-                <h3 className="text-lg font-semibold">Included in premium direction</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">
-                  Stronger review depth, app-backed workflow, longer history,
-                  progress tracking, and a more serious long-term player experience.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
-                <h3 className="text-lg font-semibold">Still to wire properly</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">
-                  Real checkout links, real download destinations, screenshots,
-                  richer media, and deeper flagship systems over time.
-                </p>
-              </div>
+            <div className="mt-6 space-y-3">
+              {trustPoints.map((point) => (
+                <div
+                  key={point}
+                  className="rounded-2xl border border-white/10 bg-[#0b1728] p-4 text-sm leading-6 text-white/70"
+                >
+                  {point}
+                </div>
+              ))}
             </div>
 
-            <div className="mt-6 rounded-2xl border border-cyan-400/15 bg-cyan-400/10 p-5 text-sm text-white/75">
-              Public launch support messaging should stay focused on{" "}
-              <span className="font-medium text-cyan-200">
-                {siteConfig.supportedVersions.primary}
-              </span>
-              . Wider support can come later without overpromising.
+            <div className="mt-6 rounded-2xl border border-cyan-400/15 bg-cyan-400/10 p-5 text-sm leading-6 text-white/75">
+              Founder lifetime pricing should feel like an early-stage offer, not
+              cheap throwaway pricing. Keep the tone premium.
             </div>
+          </div>
+        </section>
+
+        <section className="mt-16 rounded-[30px] border border-cyan-400/20 bg-cyan-400/10 p-8 shadow-[0_0_70px_rgba(34,211,238,0.06)] sm:p-10">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-200">
+            Next step
+          </p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
+            Start free, compare the ladder, then move up when you want more depth.
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-6 text-white/75">
+            The premium page should feel premium enough to convert, while still
+            being clear about what the user is actually getting.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/downloads"
+              className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+            >
+              Open Downloads
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+            >
+              Contact Support
+            </a>
           </div>
         </section>
       </div>
