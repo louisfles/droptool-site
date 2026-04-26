@@ -28,10 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="sticky top-0 z-50 border-b border-white/10 bg-[#050d18]/80 backdrop-blur-xl">
+        <div className="sticky top-0 z-50 border-b border-white/10 bg-[#040914]/78 backdrop-blur-2xl">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
             <Link href="/" className="flex items-center gap-3">
-              <div className="h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_20px_rgba(103,232,249,0.9)]" />
+              <div className="relative flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-300/20 bg-white/5">
+                <div className="h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_20px_rgba(103,232,249,0.95)]" />
+              </div>
+
               <div>
                 <p className="text-sm font-semibold tracking-[0.12em] text-white">
                   {siteConfig.name}
@@ -47,7 +50,7 @@ export default function RootLayout({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-white/70 transition hover:text-white"
+                  className="text-sm text-white/68 transition hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -66,7 +69,7 @@ export default function RootLayout({
         {children}
 
         <footer className="border-t border-white/10 bg-[#040914]">
-          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:px-8 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-10">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:px-8 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-10">
             <div>
               <p className="text-lg font-semibold text-white">{siteConfig.publicOffer}</p>
               <p className="mt-3 max-w-xl text-sm leading-6 text-white/65">

@@ -5,22 +5,22 @@ const setupSteps = [
   {
     step: "01",
     title: "Install DropTool",
-    text: "Use the official DropTool route so you are starting from the trusted source instead of random files or reposts.",
+    text: "Start from the official route so the product feels trustworthy from the first click.",
   },
   {
     step: "02",
     title: "Play a mace session",
-    text: "Use it in normal play so you have real fights to review instead of trying to judge improvement from memory alone.",
+    text: "Use it around real play so the review loop reflects actual fights instead of empty setup screens.",
   },
   {
     step: "03",
     title: "Review what happened",
-    text: "Look back at the session, understand where it went wrong, and find the mistakes that keep repeating.",
+    text: "Look back at recent play and find the patterns that keep costing you fights.",
   },
   {
     step: "04",
     title: "Know what to fix next",
-    text: "Turn review into a next step so your improvement loop stays practical instead of vague.",
+    text: "Leave the session with a clearer next focus instead of vague ideas.",
   },
 ];
 
@@ -45,11 +45,11 @@ export default function DownloadsPage() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.16),transparent_28%),radial-gradient(circle_at_85%_10%,rgba(59,130,246,0.10),transparent_24%),linear-gradient(to_bottom,#06101c,#040914)]" />
 
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-8 sm:px-8 lg:px-10">
-        <section className="relative overflow-hidden rounded-[34px] border border-cyan-400/20 bg-white/5 px-6 py-10 shadow-[0_0_100px_rgba(34,211,238,0.07)] backdrop-blur-sm sm:px-10 sm:py-14 lg:px-14 lg:py-16">
+        <section className="relative overflow-hidden rounded-[36px] border border-cyan-400/20 bg-white/5 px-6 py-10 shadow-[0_0_100px_rgba(34,211,238,0.07)] backdrop-blur-sm sm:px-10 sm:py-14 lg:px-14 lg:py-16">
           <div className="absolute right-[-120px] top-[-100px] h-[320px] w-[320px] rounded-full bg-cyan-400/10 blur-3xl" />
           <div className="absolute bottom-[-120px] left-[-80px] h-[260px] w-[260px] rounded-full bg-sky-500/10 blur-3xl" />
 
-          <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.12fr_0.88fr]">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.35em] text-cyan-300">
                 Downloads
@@ -60,8 +60,8 @@ export default function DownloadsPage() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
-                The goal of this page is simple: install DropTool, play a mace session,
-                return to review, and leave with a clearer idea of what to improve next.
+                Install DropTool, play a mace session, return to review, and leave with a clearer
+                idea of what to improve next.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -81,7 +81,7 @@ export default function DownloadsPage() {
               </div>
             </div>
 
-            <div className="rounded-[28px] border border-cyan-400/20 bg-[#0a1627]/90 p-6 shadow-[0_0_60px_rgba(34,211,238,0.06)]">
+            <div className="rounded-[30px] border border-cyan-400/20 bg-[#091423]/95 p-6 shadow-[0_0_60px_rgba(34,211,238,0.06)]">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
                 Requirements
               </p>
@@ -122,7 +122,7 @@ export default function DownloadsPage() {
         </section>
 
         <section className="mt-16 grid gap-6 lg:grid-cols-2">
-          <div className="rounded-[28px] border border-white/10 bg-white/5 p-7">
+          <div className="rounded-[30px] border border-white/10 bg-white/5 p-8">
             <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
               Current access
             </p>
@@ -130,21 +130,20 @@ export default function DownloadsPage() {
               Keep the route trustworthy.
             </h2>
             <p className="mt-4 text-sm leading-6 text-white/70">
-              If public release links are still being finalized, do not fake a polished
-              install route. Use the official Discord and support channels until the final
-              download flow is fully ready.
+              If public release links are still being finalized, do not fake a polished install route.
+              Use the official Discord and support channels until the final download flow is fully ready.
             </p>
           </div>
 
-          <div className="rounded-[28px] border border-white/10 bg-white/5 p-7">
+          <div className="rounded-[30px] border border-white/10 bg-white/5 p-8">
             <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-              After first use
+              First-use promise
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em]">
-              The first review has to feel useful.
+              The first review should already feel useful.
             </h2>
             <p className="mt-4 text-sm leading-6 text-white/70">
-              The first-user promise is not “look at a dashboard”. It is “play, review,
+              The product promise is not “look at a dashboard”. It is “play, review,
               understand what happened, and leave with a clearer next focus”.
             </p>
           </div>

@@ -23,11 +23,11 @@ export default function PremiumPage() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.16),transparent_28%),radial-gradient(circle_at_85%_10%,rgba(59,130,246,0.10),transparent_24%),linear-gradient(to_bottom,#06101c,#040914)]" />
 
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-8 sm:px-8 lg:px-10">
-        <section className="relative overflow-hidden rounded-[34px] border border-cyan-400/20 bg-white/5 px-6 py-10 shadow-[0_0_100px_rgba(34,211,238,0.07)] backdrop-blur-sm sm:px-10 sm:py-14 lg:px-14 lg:py-16">
+        <section className="relative overflow-hidden rounded-[36px] border border-cyan-400/20 bg-white/5 px-6 py-10 shadow-[0_0_100px_rgba(34,211,238,0.07)] backdrop-blur-sm sm:px-10 sm:py-14 lg:px-14 lg:py-16">
           <div className="absolute right-[-120px] top-[-100px] h-[320px] w-[320px] rounded-full bg-cyan-400/10 blur-3xl" />
           <div className="absolute bottom-[-120px] left-[-80px] h-[260px] w-[260px] rounded-full bg-sky-500/10 blur-3xl" />
 
-          <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.12fr_0.88fr]">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.35em] text-cyan-300">
                 Premium
@@ -58,7 +58,7 @@ export default function PremiumPage() {
               </div>
             </div>
 
-            <div className="rounded-[28px] border border-cyan-400/20 bg-[#0a1627]/90 p-6 shadow-[0_0_60px_rgba(34,211,238,0.06)]">
+            <div className="rounded-[30px] border border-cyan-400/20 bg-[#091423]/95 p-6 shadow-[0_0_60px_rgba(34,211,238,0.06)]">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
                 Plan logic
               </p>
@@ -79,11 +79,11 @@ export default function PremiumPage() {
         </section>
 
         <section className="mt-16">
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`rounded-[28px] border p-6 shadow-[0_0_40px_rgba(34,211,238,0.05)] ${
+                className={`rounded-[30px] border p-6 shadow-[0_0_40px_rgba(34,211,238,0.05)] ${
                   tier.highlight
                     ? "border-cyan-300/35 bg-cyan-400/10"
                     : "border-cyan-400/20 bg-white/5"

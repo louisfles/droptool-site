@@ -2,47 +2,83 @@
 import { pricingTiers } from "@/lib/pricing";
 import { siteConfig } from "@/lib/site-config";
 
-const coreCards = [
+const improvementCards = [
   {
     title: "Review fights",
     text: "Turn recent mace sessions into something clearer than vague memory or slow replay digging.",
   },
   {
     title: "Spot repeated mistakes",
-    text: "See the problems that keep costing you fights so your review actually changes what you do next.",
+    text: "See the issues that keep costing you fights so your review changes what you do next.",
   },
   {
     title: "Know your next focus",
-    text: "Use a more structured improvement loop instead of guessing what to practice after each session.",
+    text: "Leave a session with a clearer next step instead of guessing what to practice.",
   },
 ];
 
-const valueCards = [
+const whyCards = [
   {
-    title: "Generic stats stay shallow",
-    text: "Numbers alone rarely tell you what actually cost you the fight.",
+    title: "Replay alone is too slow",
+    text: "Watching footage helps, but it still leaves too much interpretation work on the player.",
   },
   {
-    title: "Replay review is slow",
-    text: "Watching footage helps, but it is still easy to miss patterns or waste time without a cleaner review structure.",
+    title: "Generic stats stay shallow",
+    text: "Basic numbers rarely explain why the fight went wrong or what should change next.",
   },
   {
     title: "Focused beats broad",
-    text: "A mace-first product feels stronger because it is narrow, honest, and built around a specific improvement loop.",
+    text: "A mace-first product feels stronger because it is disciplined, understandable, and built around a specific loop.",
+  },
+];
+
+const workflow = [
+  {
+    step: "01",
+    title: "Play",
+    text: "Use it around real mace sessions instead of fake demo flows or empty dashboards.",
+  },
+  {
+    step: "02",
+    title: "Review",
+    text: "Look back at recent fights and understand where sessions start to break down.",
+  },
+  {
+    step: "03",
+    title: "Improve",
+    text: "Turn review into a next focus so improvement becomes more structured over time.",
+  },
+];
+
+const surfacePanels = [
+  {
+    label: "Recent session",
+    value: "8 fights reviewed",
+    sub: "Mace session flow",
+  },
+  {
+    label: "Repeated issue",
+    value: "Late punish timing",
+    sub: "Worth revisiting",
+  },
+  {
+    label: "Next focus",
+    value: "Cleaner session review",
+    sub: "Actionable direction",
   },
 ];
 
 export default function HomePage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#050d18] text-white">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.16),transparent_28%),radial-gradient(circle_at_85%_10%,rgba(59,130,246,0.10),transparent_24%),linear-gradient(to_bottom,#06101c,#040914)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.18),transparent_28%),radial-gradient(circle_at_85%_10%,rgba(59,130,246,0.10),transparent_24%),linear-gradient(to_bottom,#06101c,#040914)]" />
 
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-8 sm:px-8 lg:px-10">
-        <section className="relative overflow-hidden rounded-[34px] border border-cyan-400/20 bg-white/5 px-6 py-10 shadow-[0_0_100px_rgba(34,211,238,0.07)] backdrop-blur-sm sm:px-10 sm:py-14 lg:px-14 lg:py-16">
+        <section className="relative overflow-hidden rounded-[36px] border border-cyan-400/20 bg-white/5 px-6 py-10 shadow-[0_0_110px_rgba(34,211,238,0.07)] backdrop-blur-sm sm:px-10 sm:py-14 lg:px-14 lg:py-16">
           <div className="absolute right-[-120px] top-[-100px] h-[320px] w-[320px] rounded-full bg-cyan-400/10 blur-3xl" />
-          <div className="absolute bottom-[-120px] left-[-80px] h-[260px] w-[260px] rounded-full bg-sky-500/10 blur-3xl" />
+          <div className="absolute bottom-[-140px] left-[-100px] h-[280px] w-[280px] rounded-full bg-sky-500/10 blur-3xl" />
 
-          <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.12fr_0.88fr]">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.35em] text-cyan-300">
                 {siteConfig.publicOffer}
@@ -91,49 +127,102 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-[28px] border border-cyan-400/20 bg-[#0a1627]/90 p-6 shadow-[0_0_60px_rgba(34,211,238,0.06)]">
-              <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-                What it is
-              </p>
+            <div className="relative rounded-[30px] border border-cyan-400/20 bg-[#091423]/95 p-6 shadow-[0_0_60px_rgba(34,211,238,0.06)]">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.25em] text-cyan-300">
+                    Product surface
+                  </p>
+                  <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+                    Built for review, not noise.
+                  </h2>
+                </div>
+                <div className="rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-cyan-200">
+                  Mace
+                </div>
+              </div>
 
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                A focused mace improvement system.
-              </h2>
-
-              <p className="mt-4 text-sm leading-6 text-white/70">
-                DropTool Mace is not trying to look like a broad unfinished PvP platform.
-                The public offer is narrow on purpose: help mace players review recent play,
-                understand what went wrong, and improve with more structure.
-              </p>
-
-              <div className="mt-6 space-y-3">
-                {coreCards.map((item) => (
+              <div className="mt-6 space-y-4">
+                {surfacePanels.map((panel) => (
                   <div
-                    key={item.title}
+                    key={panel.label}
                     className="rounded-2xl border border-white/10 bg-white/5 p-4"
                   >
-                    <h3 className="text-sm font-semibold text-white">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-white/65">{item.text}</p>
+                    <p className="text-[11px] uppercase tracking-[0.2em] text-white/45">
+                      {panel.label}
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-white">{panel.value}</p>
+                    <p className="mt-1 text-sm text-white/60">{panel.sub}</p>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-6 rounded-2xl border border-cyan-400/15 bg-cyan-400/10 p-4 text-sm leading-6 text-white/75">
+                Narrow scope is a strength here. The product feels more credible because the
+                public release is focused on one clear improvement loop.
               </div>
             </div>
           </div>
         </section>
 
         <section className="mt-16 grid gap-6 lg:grid-cols-3">
-          {valueCards.map((item) => (
+          {improvementCards.map((item) => (
             <div
               key={item.title}
-              className="rounded-[28px] border border-white/10 bg-white/5 p-7"
+              className="rounded-[28px] border border-white/10 bg-white/5 p-7 shadow-[0_0_40px_rgba(34,211,238,0.03)]"
             >
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-                Why it helps
+                What it does
               </p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight">{item.title}</h2>
               <p className="mt-4 text-sm leading-6 text-white/70">{item.text}</p>
             </div>
           ))}
+        </section>
+
+        <section className="mt-16 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
+              Why it helps
+            </p>
+            <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              Most players know they lost. Fewer know exactly why.
+            </h2>
+            <div className="mt-8 grid gap-4">
+              {whyCards.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-white/10 bg-[#0b1728] p-5"
+                >
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/70">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
+              Improvement loop
+            </p>
+            <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              Play, review, and leave with a clearer next focus.
+            </h2>
+            <div className="mt-8 space-y-4">
+              {workflow.map((item) => (
+                <div
+                  key={item.step}
+                  className="rounded-2xl border border-white/10 bg-[#0b1728] p-5"
+                >
+                  <p className="text-xs font-semibold tracking-[0.25em] text-cyan-300">
+                    {item.step}
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/70">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section className="mt-16">
@@ -145,8 +234,8 @@ export default function HomePage() {
               Start free. Upgrade when you want more depth.
             </h2>
             <p className="mt-4 text-base leading-7 text-white/70">
-              Lite proves the value. Coach is the main offer for most serious players.
-              Full is the deepest premium layer for stronger review depth and long-term edge.
+              Lite proves value. Coach is the main offer for most serious mace players.
+              Full is the deepest premium layer for stronger review depth and longer-term edge.
             </p>
           </div>
 
@@ -190,7 +279,7 @@ export default function HomePage() {
 
         <section className="mt-16 rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
-            Common objections
+            Objections
           </p>
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
@@ -202,11 +291,11 @@ export default function HomePage() {
             <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
               <h3 className="text-lg font-semibold">Why not just watch replays?</h3>
               <p className="mt-2 text-sm leading-6 text-white/70">
-                Replays help, but they do not automatically give you a cleaner review loop.
+                Replays help, but they still do not automatically create a cleaner review loop.
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
-              <h3 className="text-lg font-semibold">Does it work for 1.21.x?</h3>
+              <h3 className="text-lg font-semibold">Does it support 1.21.x?</h3>
               <p className="mt-2 text-sm leading-6 text-white/70">
                 Yes. Public support messaging is focused on 1.21.x first.
               </p>
