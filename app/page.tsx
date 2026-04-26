@@ -1,51 +1,34 @@
-﻿import { pricingTiers } from "@/lib/pricing";
+﻿import Link from "next/link";
+import { pricingTiers } from "@/lib/pricing";
 import { siteConfig } from "@/lib/site-config";
 
-const statCards = [
+const coreCards = [
   {
-    label: "Identity",
-    value: "PvP Performance Intelligence",
+    title: "Review fights",
+    text: "Turn recent mace sessions into something clearer than vague memory or slow replay digging.",
   },
   {
-    label: "Launch focus",
-    value: `${siteConfig.supportedVersions.primary} first`,
+    title: "Spot repeated mistakes",
+    text: "See the problems that keep costing you fights so your review actually changes what you do next.",
   },
   {
-    label: "Model",
-    value: "Lite, Coach, Full",
-  },
-];
-
-const featureBlocks = [
-  {
-    title: "Evaluate performance",
-    text: "Turn sessions into something readable, structured, and useful instead of relying on surface-level stats alone.",
-  },
-  {
-    title: "Improve with intent",
-    text: "Build around coaching-first review, stronger insight layers, and a cleaner workflow for real progression.",
-  },
-  {
-    title: "Scale into premium depth",
-    text: "Move from free entry into deeper review and analytics without fragmenting the product into disconnected tools.",
+    title: "Know your next focus",
+    text: "Use a more structured improvement loop instead of guessing what to practice after each session.",
   },
 ];
 
-const workflowSteps = [
+const valueCards = [
   {
-    step: "01",
-    title: "Play",
-    text: "DropTool starts with actual play instead of noisy dashboards and empty marketing claims.",
+    title: "Generic stats stay shallow",
+    text: "Numbers alone rarely tell you what actually cost you the fight.",
   },
   {
-    step: "02",
-    title: "Review",
-    text: "Use the mod plus app workflow to turn fights, sessions, and performance into clearer feedback.",
+    title: "Replay review is slow",
+    text: "Watching footage helps, but it is still easy to miss patterns or waste time without a cleaner review structure.",
   },
   {
-    step: "03",
-    title: "Progress",
-    text: "Track improvement over time with a more premium review layer and stronger long-term structure.",
+    title: "Focused beats broad",
+    text: "A mace-first product feels stronger because it is narrow, honest, and built around a specific improvement loop.",
   },
 ];
 
@@ -59,95 +42,98 @@ export default function HomePage() {
           <div className="absolute right-[-120px] top-[-100px] h-[320px] w-[320px] rounded-full bg-cyan-400/10 blur-3xl" />
           <div className="absolute bottom-[-120px] left-[-80px] h-[260px] w-[260px] rounded-full bg-sky-500/10 blur-3xl" />
 
-          <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.35em] text-cyan-300">
-                {siteConfig.tagline}
+                {siteConfig.publicOffer}
               </p>
 
               <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-                Evaluate better. Improve faster. Build real PvP progress.
+                Improve faster at Mace PvP.
               </h1>
 
               <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
-                DropTool is a premium Minecraft PvP performance ecosystem built
-                for players who want serious improvement software, not a cluttered
-                mod page. Clean review flow, stronger analytics, coaching-first
-                structure, and a premium path from Lite to Full.
+                Review fights, spot repeated mistakes, and know what to work on next
+                with a premium mace-first improvement system built for 1.21.x players.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <a
+                <Link
                   href="/downloads"
                   className="inline-flex items-center rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-5 py-3 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20"
                 >
-                  Download DropTool
-                </a>
+                  Start with Coach Lite
+                </Link>
 
-                <a
+                <Link
                   href="/premium"
                   className="inline-flex items-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10"
                 >
-                  Compare Premium
-                </a>
-
-                <a
-                  href={siteConfig.discordUrl}
-                  className="inline-flex items-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10"
-                >
-                  Join Discord
-                </a>
+                  Compare Plans
+                </Link>
               </div>
 
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                {statCards.map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-2xl border border-white/10 bg-[#0b1728]/90 p-4"
-                  >
-                    <p className="text-xs uppercase tracking-[0.2em] text-white/45">
-                      {item.label}
-                    </p>
-                    <p className="mt-2 text-sm font-medium text-white/90">
-                      {item.value}
-                    </p>
-                  </div>
-                ))}
+                <div className="rounded-2xl border border-white/10 bg-[#0b1728]/90 p-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-white/45">Focus</p>
+                  <p className="mt-2 text-sm font-medium text-white/90">Mace-first release</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-[#0b1728]/90 p-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-white/45">Support</p>
+                  <p className="mt-2 text-sm font-medium text-white/90">
+                    {siteConfig.supportedVersions.primary} first
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-[#0b1728]/90 p-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-white/45">Model</p>
+                  <p className="mt-2 text-sm font-medium text-white/90">Lite, Coach, Full</p>
+                </div>
               </div>
             </div>
 
             <div className="rounded-[28px] border border-cyan-400/20 bg-[#0a1627]/90 p-6 shadow-[0_0_60px_rgba(34,211,238,0.06)]">
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-                Core philosophy
+                What it is
               </p>
 
               <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-                Evaluate - Improve - Then Rank
+                A focused mace improvement system.
               </h2>
 
               <p className="mt-4 text-sm leading-6 text-white/70">
-                The brand should feel like serious performance software for PvP
-                players who care about progression, credibility, and clean review
-                tooling.
+                DropTool Mace is not trying to look like a broad unfinished PvP platform.
+                The public offer is narrow on purpose: help mace players review recent play,
+                understand what went wrong, and improve with more structure.
               </p>
 
               <div className="mt-6 space-y-3">
-                {featureBlocks.map((item) => (
+                {coreCards.map((item) => (
                   <div
                     key={item.title}
                     className="rounded-2xl border border-white/10 bg-white/5 p-4"
                   >
-                    <h3 className="text-sm font-semibold text-white">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-white/65">
-                      {item.text}
-                    </p>
+                    <h3 className="text-sm font-semibold text-white">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-white/65">{item.text}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="mt-16 grid gap-6 lg:grid-cols-3">
+          {valueCards.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[28px] border border-white/10 bg-white/5 p-7"
+            >
+              <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
+                Why it helps
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold tracking-tight">{item.title}</h2>
+              <p className="mt-4 text-sm leading-6 text-white/70">{item.text}</p>
+            </div>
+          ))}
         </section>
 
         <section className="mt-16">
@@ -156,12 +142,11 @@ export default function HomePage() {
               Product ladder
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              One ecosystem. Three levels of depth.
+              Start free. Upgrade when you want more depth.
             </h2>
             <p className="mt-4 text-base leading-7 text-white/70">
-              DropTool Coach Lite is the free entry point. DropTool Coach is the
-              main paid tier. DropTool Full is the flagship layer for the deepest
-              analytics and strongest long-term review experience.
+              Lite proves the value. Coach is the main offer for most serious players.
+              Full is the deepest premium layer for stronger review depth and long-term edge.
             </p>
           </div>
 
@@ -169,33 +154,32 @@ export default function HomePage() {
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
-                className="rounded-[26px] border border-cyan-400/20 bg-white/5 p-6 shadow-[0_0_40px_rgba(34,211,238,0.05)]"
+                className={`rounded-[28px] border p-6 shadow-[0_0_40px_rgba(34,211,238,0.05)] ${
+                  tier.highlight
+                    ? "border-cyan-300/35 bg-cyan-400/10"
+                    : "border-cyan-400/20 bg-white/5"
+                }`}
               >
-                <h3 className="text-2xl font-semibold tracking-tight">
-                  {tier.name}
-                </h3>
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-2xl font-semibold tracking-tight">{tier.name}</h3>
+                  {tier.badge ? (
+                    <span className="rounded-full border border-cyan-300/20 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-cyan-200">
+                      {tier.badge}
+                    </span>
+                  ) : null}
+                </div>
 
-                <p className="mt-3 text-cyan-300">{tier.price}</p>
-
-                {"lifetimePrice" in tier && tier.lifetimePrice ? (
-                  <p className="mt-1 text-sm text-white/45">
-                    {tier.lifetimePrice}
-                  </p>
+                <p className="mt-4 text-cyan-300">{tier.price}</p>
+                {tier.lifetimePrice ? (
+                  <p className="mt-1 text-sm text-white/45">{tier.lifetimePrice}</p>
                 ) : null}
 
-                <p className="mt-4 text-sm leading-6 text-white/70">
-                  {tier.description}
-                </p>
-
-                <ul className="mt-6 space-y-2 text-sm text-white/75">
-                  {tier.features.map((feature) => (
-                    <li key={feature}>- {feature}</li>
-                  ))}
-                </ul>
+                <p className="mt-4 text-sm font-medium text-white">{tier.summary}</p>
+                <p className="mt-3 text-sm leading-6 text-white/70">{tier.description}</p>
 
                 <a
                   href={tier.ctaHref}
-                  className="mt-8 inline-flex rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20"
+                  className="mt-8 inline-flex rounded-xl border border-cyan-300/30 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10"
                 >
                   {tier.ctaLabel}
                 </a>
@@ -204,110 +188,56 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-16 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-[28px] border border-white/10 bg-white/5 p-7">
-            <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-              Workflow
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em]">
-              Built around play, review, and progress.
-            </h2>
-
-            <div className="mt-8 space-y-4">
-              {workflowSteps.map((item) => (
-                <div
-                  key={item.step}
-                  className="rounded-2xl border border-white/10 bg-[#0b1728] p-5"
-                >
-                  <p className="text-xs font-semibold tracking-[0.25em] text-cyan-300">
-                    {item.step}
-                  </p>
-                  <h3 className="mt-2 text-lg font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/70">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
+        <section className="mt-16 rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
+            Common objections
+          </p>
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
+              <h3 className="text-lg font-semibold">Is this for all PvP modes?</h3>
+              <p className="mt-2 text-sm leading-6 text-white/70">
+                No. The public release is intentionally mace-first.
+              </p>
             </div>
-          </div>
-
-          <div className="rounded-[28px] border border-white/10 bg-white/5 p-7">
-            <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">
-              Launch clarity
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em]">
-              Premium presentation without fake claims.
-            </h2>
-
-            <div className="mt-6 space-y-4">
-              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
-                <h3 className="text-lg font-semibold">Available now</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">
-                  Official site, product ladder, trusted downloads flow,
-                  premium structure, Discord funnel, and clean brand direction.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
-                <h3 className="text-lg font-semibold">Included in premium</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">
-                  Stronger review depth, app-backed workflow, longer history,
-                  progress tracking, and clearer premium positioning.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
-                <h3 className="text-lg font-semibold">Rolling out later</h3>
-                <p className="mt-2 text-sm leading-6 text-white/70">
-                  Final checkout wiring, real download links, screenshots,
-                  stronger polish, and deeper long-term premium systems.
-                </p>
-              </div>
+            <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
+              <h3 className="text-lg font-semibold">Why not just watch replays?</h3>
+              <p className="mt-2 text-sm leading-6 text-white/70">
+                Replays help, but they do not automatically give you a cleaner review loop.
+              </p>
             </div>
-
-            <div className="mt-6 rounded-2xl border border-cyan-400/15 bg-cyan-400/10 p-5 text-sm text-white/75">
-              Public support messaging stays focused on{" "}
-              <span className="font-medium text-cyan-200">
-                {siteConfig.supportedVersions.primary}
-              </span>
-              . {siteConfig.supportedVersions.secondaryPlanned} may follow later.
+            <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5">
+              <h3 className="text-lg font-semibold">Does it work for 1.21.x?</h3>
+              <p className="mt-2 text-sm leading-6 text-white/70">
+                Yes. Public support messaging is focused on 1.21.x first.
+              </p>
             </div>
           </div>
         </section>
 
         <section className="mt-16 rounded-[30px] border border-cyan-400/20 bg-cyan-400/10 p-8 shadow-[0_0_70px_rgba(34,211,238,0.06)] sm:p-10">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-200">
-            Official next step
+            Final CTA
           </p>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-            Join the community, download safely, and upgrade when you want more
-            depth.
+            Stop guessing what went wrong in your fights.
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-6 text-white/75">
-            Keep the public message simple: official downloads, premium upgrade
-            path, trustworthy positioning, and a product built to help players
-            improve.
+            Start with Lite, play a mace session, and review what to improve next.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
+            <Link
               href="/downloads"
               className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
             >
-              Open Downloads
-            </a>
-            <a
+              Start with Coach Lite
+            </Link>
+            <Link
               href="/premium"
               className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
             >
-              Compare Premium
-            </a>
-            <a
-              href={siteConfig.discordUrl}
-              className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
-            >
-              Join Discord
-            </a>
+              Compare Plans
+            </Link>
           </div>
         </section>
       </div>

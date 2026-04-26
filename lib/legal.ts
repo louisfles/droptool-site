@@ -1,35 +1,35 @@
-export const tosSections = [
+﻿export const tosSections = [
   {
     title: "Use of the service",
     body:
-      "DropTool is provided as official software and related services for analytics, coaching, downloads, and support. Users must not misuse the service or attempt to interfere with platform integrity.",
+      "DropTool is provided as software and related site, support, and product services. Users must not misuse the service, attempt to interfere with platform integrity, or distribute software in unauthorized ways.",
   },
   {
-    title: "Accounts, purchases, and access",
+    title: "Purchases and access",
     body:
-      "Premium access, founder pricing, and future entitlements may change over time. Access may depend on the current state of the product, services, rollout, and account systems.",
+      "Premium access, founder pricing, entitlements, and product scope may change over time as the product evolves. The site should present pricing clearly without inventing unsupported billing behavior.",
   },
   {
-    title: "No warranty",
+    title: "Product scope and availability",
     body:
-      "DropTool is provided in good faith, but availability, features, and compatibility may evolve over time as the product develops.",
+      "DropTool Mace is a focused product direction. Features, compatibility, and rollout state may evolve as the release matures.",
   },
 ];
 
 export const privacySections = [
   {
-    title: "What this page is for",
+    title: "What this page covers",
     body:
-      "This privacy page explains, in straightforward language, how DropTool may handle site, support, account, and product-related information.",
+      "This privacy page explains, in clear public language, how DropTool may handle site, support, account, and product-related information.",
   },
   {
-    title: "Data we may use",
+    title: "Information that may be used",
     body:
-      "Depending on the product state, this may include contact information, account identifiers, usage-related signals, support communication, and purchase-related status.",
+      "Depending on product state, this may include contact information, support communication, account-related identifiers, purchase status, and product usage signals relevant to operating the service.",
   },
   {
-    title: "How we use it",
+    title: "Why it may be used",
     body:
-      "We use information to operate the service, support users, improve the product, manage premium access, and maintain platform integrity.",
+      "Information may be used to operate the service, support users, manage premium access, improve the product, and maintain platform integrity.",
   },
 ];

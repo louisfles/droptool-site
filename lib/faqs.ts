@@ -1,37 +1,42 @@
-export const faqs = [
+﻿export const faqs = [
   {
-    question: "What is DropTool?",
+    question: "What is DropTool Mace?",
     answer:
-      "DropTool is a premium Minecraft PvP performance ecosystem focused on analytics, coaching-first improvement, and long-term progression.",
+      "DropTool Mace is a premium mace-first review and improvement product for Minecraft 1.21.x players. It is designed to help players review fights, spot repeated mistakes, and know what to work on next.",
   },
   {
-    question: "Is DropTool a mod, an app, or both?",
+    question: "Is this for all PvP modes?",
     answer:
-      "DropTool is designed around a mod plus app workflow. Coach Lite is the free entry point, while premium tiers expand the analytics and review experience.",
+      "No. The public release is intentionally narrowed into a mace-first offer. That focus makes the product easier to understand, more credible, and more useful for the players it is built for.",
   },
   {
-    question: "What is DropTool Coach Lite?",
+    question: "Why use this instead of just watching replays?",
     answer:
-      "Coach Lite is the free funnel tier. It is useful, lightweight, and designed to help players start improving without unlocking the full premium depth.",
+      "Replay review can help, but it is often slow, inconsistent, and hard to turn into a clear next step. DropTool Mace is meant to make recent play easier to review and easier to act on.",
   },
   {
-    question: "What does premium include?",
+    question: "What does DropTool Mace actually help me understand?",
     answer:
-      "Premium expands history, review depth, progress tracking, comparisons, and the overall app-backed experience. Full is intended to be the flagship layer.",
+      "The product is meant to help you review recent mace fights, understand where sessions go wrong, spot repeated issues, and build a clearer improvement loop over time.",
   },
   {
-    question: "What Minecraft versions are supported?",
+    question: "Does it support 1.21.x?",
     answer:
-      "Public-facing launch messaging is focused on 1.21.x first. 1.20.1 may follow later. Wider version support is intentionally not overpromised early.",
+      "Yes. Public support messaging is focused on 1.21.x first. 1.20.1 may follow later, but the site should not overpromise wider support early.",
   },
   {
-    question: "Where should I download DropTool safely?",
+    question: "What is the difference between Lite, Coach, and Full?",
     answer:
-      "Use the official Downloads page, the official Discord, and approved publishing links like Modrinth or CurseForge when those links are live.",
+      "Lite is the free entry point, Coach is the main paid plan for most serious players, and Full is the deepest premium layer for players who want the strongest long-term review depth.",
   },
   {
-    question: "Is everything on the website already live?",
+    question: "Do I need to use it every time I play?",
     answer:
-      "The site communicates the full release vision, but copy should stay honest about what is available now, what is included in premium, what is rolling out, and what is future direction.",
+      "No. The value comes from using it as a structured review tool around your mace sessions so you can understand recent play and improve with more intent.",
+  },
+  {
+    question: "Is the site claiming features that are not live yet?",
+    answer:
+      "It should not. The public message should stay disciplined about what is available now, what is included in premium, what is still rolling out, and what remains future direction.",
   },
 ];

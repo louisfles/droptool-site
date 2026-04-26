@@ -1,48 +1,71 @@
-﻿export const pricingTiers = [
+﻿export type PricingTier = {
+  name: string;
+  price: string;
+  lifetimePrice?: string;
+  summary: string;
+  description: string;
+  features: string[];
+  ctaLabel: string;
+  ctaHref: string;
+  badge?: string;
+  highlight?: boolean;
+};
+
+export const pricingTiers: PricingTier[] = [
   {
-    name: "DropTool Coach Lite",
+    name: "Coach Lite",
     price: "Free",
-    description: "The free coaching-first entry point for players getting started.",
+    summary: "Start free and review your first mace sessions.",
+    description:
+      "The free entry point for players who want a cleaner way to start improving without committing to a paid plan first.",
     features: [
-      "Basic overlay",
-      "Basic session summary",
-      "Limited history",
-      "Useful improvement signals",
-      "Official entry into the DropTool ecosystem",
+      "Review your first mace sessions",
+      "See recent fight history",
+      "Get a lightweight improvement loop",
+      "Understand the basic product flow",
+      "Enter the DropTool ecosystem for free",
     ],
-    ctaLabel: "Start Free",
+    ctaLabel: "Start with Lite",
     ctaHref: "/downloads",
+    badge: "Free Entry",
   },
   {
-    name: "DropTool Coach",
+    name: "Coach",
     price: "GBP 3.99/month",
     lifetimePrice: "GBP 24.99 founder lifetime",
-    description: "The main paid tier for serious players who want stronger insights and a premium app-backed workflow.",
+    summary: "The main paid plan for serious mace players.",
+    description:
+      "Built for players who want the core premium review loop: more depth, clearer structure, and stronger value for consistent improvement.",
     features: [
-      "Desktop app access",
-      "Premium dashboard",
-      "Longer history windows",
-      "Session comparisons",
-      "Progress tracking",
-      "Premium Discord role",
+      "Review more mace sessions",
+      "Unlock deeper fight breakdowns",
+      "Spot repeated mistakes more clearly",
+      "Track progress with more context",
+      "Use a stronger premium workflow",
+      "Get the clearest value for most players",
     ],
-    ctaLabel: "Upgrade to Coach",
-    ctaHref: "/premium",
+    ctaLabel: "Compare Coach",
+    ctaHref: "/contact",
+    badge: "Recommended",
+    highlight: true,
   },
   {
-    name: "DropTool Full",
+    name: "Full",
     price: "GBP 7.99/month",
     lifetimePrice: "GBP 49.99 founder lifetime",
-    description: "The flagship premium tier with the deepest analytics and strongest long-term review layer.",
+    summary: "The deepest premium layer for stronger review depth.",
+    description:
+      "The flagship premium tier for players who want the richest review layer, stronger evidence, and the highest long-term ceiling.",
     features: [
       "Everything in Coach",
-      "Deepest analytics",
-      "Stronger review tools",
-      "Flagship premium experience",
-      "Future Evaluate-style systems",
-      "Highest long-term ceiling",
+      "Richer evidence and review depth",
+      "Stronger long-term progression context",
+      "Deeper premium analysis layer",
+      "Highest product ceiling",
+      "Best fit for the most serious grinders",
     ],
-    ctaLabel: "Go Full",
-    ctaHref: "/premium",
+    ctaLabel: "Compare Full",
+    ctaHref: "/contact",
+    badge: "Flagship",
   },
 ];
