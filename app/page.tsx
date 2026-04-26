@@ -68,6 +68,12 @@ const surfacePanels = [
   },
 ];
 
+const proofPoints = [
+  "Focused on Mace PvP instead of pretending to solve every mode",
+  "Built around review, progression, and next-step clarity",
+  "Premium ladder that starts free and scales with depth",
+];
+
 export default function HomePage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#050d18] text-white">
@@ -222,6 +228,26 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="mt-16 rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
+            Product proof
+          </p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
+            Premium because it is disciplined, not because it makes bigger claims.
+          </h2>
+
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            {proofPoints.map((point) => (
+              <div
+                key={point}
+                className="rounded-2xl border border-white/10 bg-[#0b1728] p-5 text-sm leading-6 text-white/75"
+              >
+                {point}
+              </div>
+            ))}
           </div>
         </section>
 
