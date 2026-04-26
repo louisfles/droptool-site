@@ -1,5 +1,5 @@
 ﻿import Link from "next/link";
-import { pricingTiers } from "@/lib/pricing";
+import { comparisonRows, pricingTiers } from "@/lib/pricing";
 import { siteConfig } from "@/lib/site-config";
 
 const comparisonPoints = [
@@ -14,29 +14,6 @@ const comparisonPoints = [
   {
     title: "Full",
     text: "The deepest premium layer for richer review depth and stronger long-term edge.",
-  },
-];
-
-const comparisonRows = [
-  {
-    label: "Entry point",
-    values: ["Free", "Paid core plan", "Highest-depth premium"],
-  },
-  {
-    label: "Session review depth",
-    values: ["Starter", "Deeper", "Deepest"],
-  },
-  {
-    label: "Fight breakdown clarity",
-    values: ["Basic", "Stronger", "Strongest"],
-  },
-  {
-    label: "Progress context",
-    values: ["Light", "Expanded", "Richest"],
-  },
-  {
-    label: "Best fit",
-    values: ["First-time users", "Most serious players", "Hardcore grinders"],
   },
 ];
 
@@ -151,14 +128,14 @@ export default function PremiumPage() {
             Comparison
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-            Pick based on depth, not marketing noise.
+            Pick based on depth, not vague labels.
           </h2>
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
             <div className="grid grid-cols-4 border-b border-white/10 bg-[#0b1728] text-sm">
               <div className="p-4 text-white/55">Category</div>
               <div className="p-4 font-medium text-white">Coach Lite</div>
-              <div className="p-4 font-medium text-cyan-200">Coach</div>
+              <div className="bg-cyan-400/[0.04] p-4 font-medium text-cyan-200">Coach</div>
               <div className="p-4 font-medium text-white">Full</div>
             </div>
 

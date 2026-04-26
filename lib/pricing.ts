@@ -11,19 +11,24 @@
   highlight?: boolean;
 };
 
+export type ComparisonRow = {
+  label: string;
+  values: [string, string, string];
+};
+
 export const pricingTiers: PricingTier[] = [
   {
     name: "Coach Lite",
     price: "Free",
-    summary: "Start free and review your first mace sessions.",
+    summary: "Start free and test the core review loop.",
     description:
-      "The free entry point for players who want a cleaner way to start improving without committing to a paid plan first.",
+      "The free entry point for players who want to try DropTool Mace, understand the flow, and decide whether deeper review is worth paying for.",
     features: [
-      "Review your first mace sessions",
-      "See recent fight history",
-      "Get a lightweight improvement loop",
-      "Understand the basic product flow",
-      "Enter the DropTool ecosystem for free",
+      "Limited recent session review",
+      "Basic fight history access",
+      "Starter improvement loop",
+      "Entry access to the product",
+      "No payment required",
     ],
     ctaLabel: "Start Free",
     ctaHref: "/downloads",
@@ -33,16 +38,15 @@ export const pricingTiers: PricingTier[] = [
     name: "Coach",
     price: "GBP 3.99/month",
     lifetimePrice: "GBP 24.99 founder lifetime",
-    summary: "The main paid plan for serious mace players.",
+    summary: "The main paid plan for most serious players.",
     description:
-      "Built for players who want the core premium review loop: more depth, clearer structure, and stronger value for consistent improvement.",
+      "Built for players who want a stronger review loop, more usable depth, and the clearest value point without needing the highest tier.",
     features: [
-      "Review more mace sessions",
-      "Unlock deeper fight breakdowns",
-      "Spot repeated mistakes more clearly",
-      "Track progress with more context",
-      "Use a stronger premium workflow",
-      "Get the clearest value for most players",
+      "Expanded session review access",
+      "Deeper fight breakdowns",
+      "Clearer repeated mistake visibility",
+      "More progression context",
+      "Best value for most serious players",
     ],
     ctaLabel: "Choose Coach",
     ctaHref: "/contact",
@@ -53,19 +57,49 @@ export const pricingTiers: PricingTier[] = [
     name: "Full",
     price: "GBP 7.99/month",
     lifetimePrice: "GBP 49.99 founder lifetime",
-    summary: "The deepest premium layer for stronger review depth.",
+    summary: "The deepest premium layer for the most committed players.",
     description:
-      "The flagship premium tier for players who want the richest review layer, stronger evidence, and the highest long-term ceiling.",
+      "The flagship tier for players who want the richest review depth, strongest long-term context, and the highest-end version of the product.",
     features: [
       "Everything in Coach",
-      "Richer evidence and review depth",
-      "Stronger long-term progression context",
-      "Deeper premium analysis layer",
-      "Highest product ceiling",
-      "Best fit for the most serious grinders",
+      "Deepest review depth",
+      "Strongest evidence layer",
+      "Richest long-term progression context",
+      "Best fit for hardcore grinders",
     ],
     ctaLabel: "Choose Full",
     ctaHref: "/contact",
     badge: "Flagship",
+  },
+];
+
+export const comparisonRows: ComparisonRow[] = [
+  {
+    label: "Price",
+    values: ["Free", "GBP 3.99/month", "GBP 7.99/month"],
+  },
+  {
+    label: "Founder lifetime",
+    values: ["Not included", "GBP 24.99", "GBP 49.99"],
+  },
+  {
+    label: "Recent session review",
+    values: ["Limited", "Expanded", "Fullest access"],
+  },
+  {
+    label: "Fight breakdown depth",
+    values: ["Basic", "Deeper", "Deepest"],
+  },
+  {
+    label: "Repeated mistake visibility",
+    values: ["Starter", "Stronger", "Strongest"],
+  },
+  {
+    label: "Progress tracking context",
+    values: ["Light", "Expanded", "Richest"],
+  },
+  {
+    label: "Best fit",
+    values: ["First-time users", "Most serious players", "Hardcore grinders"],
   },
 ];
