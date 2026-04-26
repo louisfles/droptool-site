@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 const improvementCards = [
   {
     title: "Review fights",
-    text: "Turn recent mace sessions into something clearer than vague memory or slow replay digging.",
+    text: "Look back at recent mace fights in a way that is clearer than vague memory or slow replay digging.",
   },
   {
     title: "Spot repeated mistakes",
@@ -36,9 +36,9 @@ const workflow = [
 ];
 
 const proofPoints = [
-  "Focused on Mace PvP instead of pretending to solve every mode",
-  "Built around review, progression, and next-step clarity",
-  "Premium ladder that starts free and scales with depth",
+  "Mace-first by design",
+  "Made for real sessions",
+  "Free to start, deeper if needed",
 ];
 
 const productHighlights = [
@@ -73,12 +73,13 @@ export default function HomePage() {
               </p>
 
               <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-                Improve faster at Mace PvP.
+                Improve faster in Mace PvP.
               </h1>
 
               <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
-                Review fights, spot repeated mistakes, and know what to work on next
-                with a premium mace-first improvement system built for 1.21.x players.
+                DropTool Mace helps you review recent fights, spot repeated mistakes,
+                and leave each session knowing what to fix next. Built for Minecraft
+                1.21.x players who want a clearer improvement loop.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -93,7 +94,7 @@ export default function HomePage() {
                   href="/premium"
                   className="inline-flex items-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10"
                 >
-                  Compare Plans
+                  See Plans
                 </Link>
               </div>
 
@@ -220,18 +221,22 @@ export default function HomePage() {
               Product proof
             </p>
             <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              Premium because it is disciplined, not because it makes bigger claims.
+              Built to help you improve, not just show you stats.
             </h2>
 
             <div className="mt-8 grid gap-4">
-              {proofPoints.map((point) => (
-                <div
-                  key={point}
-                  className="rounded-2xl border border-white/10 bg-[#0b1728] p-5 text-sm leading-6 text-white/75"
-                >
-                  {point}
-                </div>
-              ))}
+              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5 text-sm leading-6 text-white/75">
+                <span className="mb-2 block text-base font-semibold text-white">Mace-first by design</span>
+                Focused on one mode so the review loop stays clear and useful.
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5 text-sm leading-6 text-white/75">
+                <span className="mb-2 block text-base font-semibold text-white">Made for real sessions</span>
+                Built around actual fight review, repeated mistakes, and next-step clarity.
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-[#0b1728] p-5 text-sm leading-6 text-white/75">
+                <span className="mb-2 block text-base font-semibold text-white">Free to start, deeper if needed</span>
+                Start with Lite, move to Coach when you want stronger review depth.
+              </div>
             </div>
           </div>
         </section>
@@ -336,7 +341,7 @@ export default function HomePage() {
               href="/premium"
               className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
             >
-              Compare Plans
+              See Plans
             </Link>
           </div>
         </section>

@@ -4,18 +4,18 @@ const contactCards = [
   {
     label: "Primary support",
     title: "Discord",
-    text: "Best for install help, release updates, questions, and the official community route.",
+    text: "Use Discord for installs, release updates, questions, and the official community route.",
     value: siteConfig.discordUrl,
     href: siteConfig.discordUrl,
-    cta: "Join Discord",
+    cta: "Open Discord",
   },
   {
     label: "Direct support",
     title: "Email",
-    text: "Best for account questions, premium interest, support issues, or anything better handled privately.",
+    text: "Use email for account issues, premium questions, support problems, or anything better handled privately.",
     value: siteConfig.supportEmail,
     href: `mailto:${siteConfig.supportEmail}`,
-    cta: "Email support",
+    cta: "Email Support",
   },
 ];
 
@@ -43,12 +43,12 @@ export default function ContactPage() {
               </p>
 
               <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-                Get support without friction.
+                Get help quickly.
               </h1>
 
               <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
-                Keep support direct, trustworthy, and premium. Users should know exactly
-                where to go for installs, premium questions, bugs, and account help.
+                Use Discord for installs, updates, and community support. Use email for
+                account issues, premium questions, or anything better handled privately.
               </p>
             </div>
 

@@ -33,11 +33,11 @@ export default function FAQPage() {
                 FAQ
               </p>
               <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-                Clear answers for players deciding whether this is worth using.
+                Questions before you start?
               </h1>
               <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
-                The goal here is simple: reduce friction, answer real objections,
-                and explain the product without broadening it into something it is not.
+                Everything here is meant to answer the main buying questions quickly:
+                what DropTool Mace does, who it is for, and whether it is worth trying.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -112,13 +112,13 @@ export default function FAQPage() {
               href="/downloads"
               className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
             >
-              Start with Coach Lite
+              Start Free
             </Link>
             <Link
               href="/premium"
               className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
             >
-              Compare Plans
+              See Plans
             </Link>
           </div>
         </section>
