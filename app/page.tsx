@@ -50,28 +50,25 @@ const workflow = [
   },
 ];
 
-const surfacePanels = [
-  {
-    label: "Recent session",
-    value: "8 fights reviewed",
-    sub: "Mace session flow",
-  },
-  {
-    label: "Repeated issue",
-    value: "Late punish timing",
-    sub: "Worth revisiting",
-  },
-  {
-    label: "Next focus",
-    value: "Cleaner session review",
-    sub: "Actionable direction",
-  },
-];
-
 const proofPoints = [
   "Focused on Mace PvP instead of pretending to solve every mode",
   "Built around review, progression, and next-step clarity",
   "Premium ladder that starts free and scales with depth",
+];
+
+const productHighlights = [
+  {
+    label: "Fight review",
+    value: "Recent sessions made readable",
+  },
+  {
+    label: "Mistake tracking",
+    value: "Repeated issues become visible",
+  },
+  {
+    label: "Next focus",
+    value: "Clearer direction after review",
+  },
 ];
 
 export default function HomePage() {
@@ -137,10 +134,10 @@ export default function HomePage() {
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
                   <p className="text-xs uppercase tracking-[0.25em] text-cyan-300">
-                    Product surface
+                    Product preview
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-                    Built for review, not noise.
+                    Screenshot-ready layout
                   </h2>
                 </div>
                 <div className="rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-cyan-200">
@@ -148,19 +145,42 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="mt-6 space-y-4">
-                {surfacePanels.map((panel) => (
-                  <div
-                    key={panel.label}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-4"
-                  >
+              <div className="mt-6 rounded-[24px] border border-white/10 bg-[#07101b] p-4">
+                <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                  <div>
                     <p className="text-[11px] uppercase tracking-[0.2em] text-white/45">
-                      {panel.label}
+                      DropTool Studio
                     </p>
-                    <p className="mt-2 text-lg font-semibold text-white">{panel.value}</p>
-                    <p className="mt-1 text-sm text-white/60">{panel.sub}</p>
+                    <p className="mt-1 text-sm font-medium text-white/85">
+                      Replace this panel with real screenshots later
+                    </p>
                   </div>
-                ))}
+
+                  <div className="flex gap-2">
+                    <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-cyan-300/70" />
+                  </div>
+                </div>
+
+                <div className="mt-4 grid gap-3">
+                  {productHighlights.map((item) => (
+                    <div
+                      key={item.label}
+                      className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                    >
+                      <p className="text-[11px] uppercase tracking-[0.2em] text-white/45">
+                        {item.label}
+                      </p>
+                      <p className="mt-2 text-sm font-medium text-white/90">{item.value}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-4 rounded-2xl border border-dashed border-cyan-300/20 bg-cyan-400/5 p-5 text-sm leading-6 text-white/55">
+                  Real product screenshots should go here next. Until then, this layout is
+                  cleaner than fake analytics noise.
+                </div>
               </div>
 
               <div className="mt-6 rounded-2xl border border-cyan-400/15 bg-cyan-400/10 p-4 text-sm leading-6 text-white/75">
