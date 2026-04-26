@@ -17,21 +17,6 @@ const improvementCards = [
   },
 ];
 
-const whyCards = [
-  {
-    title: "Replay alone is too slow",
-    text: "Watching footage helps, but it still leaves too much interpretation work on the player.",
-  },
-  {
-    title: "Generic stats stay shallow",
-    text: "Basic numbers rarely explain why the fight went wrong or what should change next.",
-  },
-  {
-    title: "Focused beats broad",
-    text: "A mace-first product feels stronger because it is disciplined, understandable, and built around a specific loop.",
-  },
-];
-
 const workflow = [
   {
     step: "01",
@@ -101,7 +86,7 @@ export default function HomePage() {
                   href="/downloads"
                   className="inline-flex items-center rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-5 py-3 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20"
                 >
-                  Start with Coach Lite
+                  Start Free
                 </Link>
 
                 <Link
@@ -206,27 +191,7 @@ export default function HomePage() {
           ))}
         </section>
 
-        <section className="mt-16 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
-              Why it helps
-            </p>
-            <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              Most players know they lost. Fewer know exactly why.
-            </h2>
-            <div className="mt-8 grid gap-4">
-              {whyCards.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-white/10 bg-[#0b1728] p-5"
-                >
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/70">{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
+        <section className="mt-16 grid gap-6 lg:grid-cols-[1fr_1fr]">
           <div className="rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
               Improvement loop
@@ -249,25 +214,25 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </section>
 
-        <section className="mt-16 rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
-            Product proof
-          </p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-            Premium because it is disciplined, not because it makes bigger claims.
-          </h2>
+          <div className="rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
+              Product proof
+            </p>
+            <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              Premium because it is disciplined, not because it makes bigger claims.
+            </h2>
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-3">
-            {proofPoints.map((point) => (
-              <div
-                key={point}
-                className="rounded-2xl border border-white/10 bg-[#0b1728] p-5 text-sm leading-6 text-white/75"
-              >
-                {point}
-              </div>
-            ))}
+            <div className="mt-8 grid gap-4">
+              {proofPoints.map((point) => (
+                <div
+                  key={point}
+                  className="rounded-2xl border border-white/10 bg-[#0b1728] p-5 text-sm leading-6 text-white/75"
+                >
+                  {point}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -357,7 +322,7 @@ export default function HomePage() {
             Stop guessing what went wrong in your fights.
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-6 text-white/75">
-            Start with Lite, play a mace session, and review what to improve next.
+            Start free, play a mace session, and review what to improve next.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -365,7 +330,7 @@ export default function HomePage() {
               href="/downloads"
               className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
             >
-              Start with Coach Lite
+              Start Free
             </Link>
             <Link
               href="/premium"

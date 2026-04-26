@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header className="sticky top-0 z-50 border-b border-white/10 bg-[#040914]/78 backdrop-blur-2xl">
-          <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
+          <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-8 lg:px-10">
             <Link href="/" className="flex items-center gap-3">
               <div className="relative flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-300/20 bg-white/5">
                 <div className="h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_20px_rgba(103,232,249,0.95)]" />
@@ -63,7 +63,7 @@ export default function RootLayout({
                 href="/downloads"
                 className="inline-flex rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20"
               >
-                Start with Lite
+                Start Free
               </Link>
             </div>
 

@@ -32,7 +32,7 @@ export default function MobileNav() {
       </button>
 
       {open ? (
-        <div className="absolute left-4 right-4 top-[72px] rounded-2xl border border-white/10 bg-[#091423]/98 p-3 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
+        <div className="absolute left-4 right-4 top-[76px] rounded-2xl border border-white/10 bg-[#091423]/98 p-3 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
@@ -50,7 +50,7 @@ export default function MobileNav() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex justify-center rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-4 py-3 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20"
             >
-              Start with Lite
+              Start Free
             </Link>
           </nav>
         </div>

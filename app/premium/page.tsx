@@ -17,6 +17,29 @@ const comparisonPoints = [
   },
 ];
 
+const comparisonRows = [
+  {
+    label: "Entry point",
+    values: ["Free", "Paid core plan", "Highest-depth premium"],
+  },
+  {
+    label: "Session review depth",
+    values: ["Starter", "Deeper", "Deepest"],
+  },
+  {
+    label: "Fight breakdown clarity",
+    values: ["Basic", "Stronger", "Strongest"],
+  },
+  {
+    label: "Progress context",
+    values: ["Light", "Expanded", "Richest"],
+  },
+  {
+    label: "Best fit",
+    values: ["First-time users", "Most serious players", "Hardcore grinders"],
+  },
+];
+
 export default function PremiumPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#050d18] text-white">
@@ -47,7 +70,7 @@ export default function PremiumPage() {
                   href="/downloads"
                   className="inline-flex items-center rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-5 py-3 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20"
                 >
-                  Start with Lite
+                  Start Free
                 </Link>
                 <Link
                   href="/contact"
@@ -125,6 +148,38 @@ export default function PremiumPage() {
 
         <section className="mt-16 rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
+            Comparison
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
+            Pick based on depth, not marketing noise.
+          </h2>
+
+          <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
+            <div className="grid grid-cols-4 border-b border-white/10 bg-[#0b1728] text-sm">
+              <div className="p-4 text-white/55">Category</div>
+              <div className="p-4 font-medium text-white">Coach Lite</div>
+              <div className="p-4 font-medium text-cyan-200">Coach</div>
+              <div className="p-4 font-medium text-white">Full</div>
+            </div>
+
+            {comparisonRows.map((row, index) => (
+              <div
+                key={row.label}
+                className={`grid grid-cols-4 text-sm ${
+                  index !== comparisonRows.length - 1 ? "border-b border-white/10" : ""
+                }`}
+              >
+                <div className="bg-white/[0.03] p-4 text-white/60">{row.label}</div>
+                <div className="p-4 text-white/80">{row.values[0]}</div>
+                <div className="bg-cyan-400/[0.04] p-4 text-cyan-100">{row.values[1]}</div>
+                <div className="p-4 text-white/80">{row.values[2]}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-16 rounded-[30px] border border-white/10 bg-white/5 p-8 sm:p-10">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
             Pricing discipline
           </p>
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
@@ -165,7 +220,7 @@ export default function PremiumPage() {
               href="/downloads"
               className="inline-flex rounded-xl border border-cyan-200/30 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
             >
-              Open Downloads
+              Start Free
             </Link>
             <a
               href={`mailto:${siteConfig.supportEmail}`}
